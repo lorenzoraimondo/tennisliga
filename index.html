@@ -504,13 +504,14 @@ document.getElementById(‘loading-overlay’).style.display=‘none’;
 document.getElementById(‘loading-overlay’).innerHTML = ` <div style="text-align:center;padding:20px;max-width:300px"> <div style="font-size:32px;margin-bottom:16px">⚠️</div> <div style="color:#e05555;font-weight:700;margin-bottom:8px">Errore connessione</div> <div style="color:#888;font-size:13px;margin-bottom:16px">${error.message}</div> <button onclick="location.reload()" style="background:#c9a84c;color:#0a0e1a;border:none;border-radius:8px;padding:10px 20px;font-weight:700;cursor:pointer">Riprova</button> </div>`;
 });
 
-// Timeout fallback — se dopo 8 secondi non si connette mostra errore
+// Timeout fallback
 setTimeout(() => {
 const overlay = document.getElementById(‘loading-overlay’);
 if (overlay && overlay.style.display !== ‘none’) {
-overlay.innerHTML = ` <div style="text-align:center;padding:20px;max-width:300px"> <div style="font-size:32px;margin-bottom:16px">⏱️</div> <div style="color:#e05555;font-weight:700;margin-bottom:8px">Connessione lenta</div> <div style="color:#888;font-size:13px;margin-bottom:16px">Impossibile raggiungere il database. Controlla la connessione.</div> <button onclick="location.reload()" style="background:#c9a84c;color:#0a0e1a;border:none;border-radius:8px;padding:10px 20px;font-weight:700;cursor:pointer;font-family:inherit">Riprova</button> </div>`;
+overlay.style.display = ‘none’;
+showScreen(‘login’);
 }
-}, 8000);
+}, 5000);
 
 // ── Pt ──
 function expectedScore(a,b){ return 1/(1+Math.pow(10,(b-a)/400)); }
