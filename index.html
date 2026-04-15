@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TennisLiga</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -24,7 +24,7 @@
   --border:rgba(255,255,255,0.07);
   --card:rgba(255,255,255,0.03);
 }
-html,body{min-height:100vh;background:var(--navy);color:var(--white);font-family:'Outfit',sans-serif;overflow-x:hidden}
+html,body{min-height:100vh;background:var(--navy);color:var(--white);font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden}
 
 /* TEXTURE BG */
 body::before{content:’’;position:fixed;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(201,168,76,0.05) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(201,168,76,0.04) 0%,transparent 50%);pointer-events:none;z-index:0}
@@ -53,27 +53,27 @@ body::before{content:’’;position:fixed;inset:0;background:radial-gradient(el
 /* LOGO */
 .logo-wrap{text-align:center;margin-bottom:4px}
 .logo-emblem{font-size:32px;display:block;margin-bottom:12px}
-.logo-text{font-family:‘Cormorant Garamond’,serif;color:var(–gold);font-size:32px;font-weight:700;letter-spacing:6px;display:block}
+.logo-text{font-family:‘Nunito’,sans-serif;color:var(–gold);font-size:32px;font-weight:900;letter-spacing:6px;display:block}
 .logo-sub{color:var(–grey);font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-top:6px;display:block}
 
 /* INPUTS */
-input,select{background:rgba(255,255,255,0.04);border:1px solid var(–border);border-bottom:1px solid var(–grey2);border-radius:0;color:var(–white);font-size:14px;padding:12px 14px;width:100%;outline:none;font-family:‘Outfit’,sans-serif;transition:border-color 0.2s;-webkit-appearance:none}
+input,select{background:rgba(255,255,255,0.04);border:1px solid var(–border);border-bottom:1px solid var(–grey2);border-radius:0;color:var(–white);font-size:15px;padding:12px 14px;width:100%;outline:none;font-family:‘Plus Jakarta Sans’,sans-serif;transition:border-color 0.2s;-webkit-appearance:none}
 input:focus,select:focus{border-bottom-color:var(–gold);background:rgba(201,168,76,0.04)}
 input::placeholder{color:var(–grey2)}
 select option{background:#1a2235}
 label.field-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(–grey);margin-bottom:4px;display:block}
 
 /* BUTTONS */
-.btn-primary{background:linear-gradient(135deg,var(–gold),var(–gold2));color:#0a0e1a;border:none;border-radius:3px;padding:14px 0;width:100%;font-weight:700;font-size:13px;cursor:pointer;letter-spacing:2px;text-transform:uppercase;font-family:‘Outfit’,sans-serif;transition:opacity 0.2s}
+.btn-primary{background:linear-gradient(135deg,var(–gold),var(–gold2));color:#0a0e1a;border:none;border-radius:10px;padding:14px 0;width:100%;font-weight:700;font-size:14px;cursor:pointer;letter-spacing:1px;text-transform:uppercase;font-family:‘Plus Jakarta Sans’,sans-serif;transition:opacity 0.2s}
 .btn-primary:hover{opacity:0.9}
-.btn-ghost{background:transparent;color:var(–grey);border:1px solid var(–border);border-radius:3px;padding:12px 0;width:100%;font-size:12px;cursor:pointer;font-family:‘Outfit’,sans-serif;letter-spacing:1px;transition:border-color 0.2s}
+.btn-ghost{background:transparent;color:var(–grey);border:1px solid var(–border);border-radius:10px;padding:12px 0;width:100%;font-size:13px;cursor:pointer;font-family:‘Plus Jakarta Sans’,sans-serif;letter-spacing:0.5px;transition:border-color 0.2s}
 .btn-ghost:hover{border-color:var(–gold-border);color:var(–gold)}
-.btn-link{background:transparent;color:var(–grey2);border:none;font-size:11px;cursor:pointer;font-family:‘Outfit’,sans-serif;padding:4px 0;letter-spacing:1px}
+.btn-link{background:transparent;color:var(–grey2);border:none;font-size:12px;cursor:pointer;font-family:‘Plus Jakarta Sans’,sans-serif;padding:4px 0;letter-spacing:0.5px}
 .btn-link:hover{color:var(–gold)}
-.btn-small{background:rgba(255,255,255,0.04);color:var(–grey);border:1px solid var(–border);border-radius:3px;padding:6px 12px;font-size:11px;cursor:pointer;font-family:‘Outfit’,sans-serif;letter-spacing:1px;transition:all 0.2s}
+.btn-small{background:rgba(255,255,255,0.04);color:var(–grey);border:1px solid var(–border);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;font-family:‘Plus Jakarta Sans’,sans-serif;letter-spacing:0.5px;transition:all 0.2s}
 .btn-small:hover{border-color:var(–gold-border);color:var(–gold)}
-.btn-danger{background:rgba(224,85,85,0.1);color:var(–red);border:1px solid rgba(224,85,85,0.25);border-radius:3px;padding:6px 10px;font-size:11px;cursor:pointer;font-family:‘Outfit’,sans-serif}
-.btn-counter{background:rgba(255,255,255,0.06);color:var(–white);border:1px solid var(–border);border-radius:3px;width:30px;height:30px;cursor:pointer;font-size:16px;display:inline-flex;align-items:center;justify-content:center;font-family:‘Outfit’,sans-serif;transition:all 0.2s}
+.btn-danger{background:rgba(224,85,85,0.1);color:var(–red);border:1px solid rgba(224,85,85,0.25);border-radius:8px;padding:6px 10px;font-size:12px;cursor:pointer;font-family:‘Plus Jakarta Sans’,sans-serif}
+.btn-counter{background:rgba(255,255,255,0.06);color:var(–white);border:1px solid var(–border);border-radius:8px;width:30px;height:30px;cursor:pointer;font-size:16px;display:inline-flex;align-items:center;justify-content:center;font-family:‘Plus Jakarta Sans’,sans-serif;transition:all 0.2s}
 .btn-counter:hover{border-color:var(–gold-border);color:var(–gold)}
 
 /* PAGE HEADER */
@@ -367,6 +367,40 @@ label.field-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;col
   </div>
 </div>
 
+<!-- ═══ PLAYER PROFILE ═══ -->
+
+<div id="screen-player" class="screen">
+  <div class="page-header">
+    <span class="header-logo" id="profile-title">Profilo</span>
+    <button class="btn-small" onclick="showScreen('dashboard')">← Indietro</button>
+  </div>
+  <div class="page-content">
+    <div class="confirm-card" style="margin-bottom:20px">
+      <div style="text-align:center;padding:8px 0 16px">
+        <div id="profile-avatar" style="width:64px;height:64px;border-radius:50%;background:var(--gold-dim);border:2px solid var(--gold-border);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:26px">🎾</div>
+        <div id="profile-name" style="font-size:22px;font-weight:800;color:var(--white);margin-bottom:4px"></div>
+        <div id="profile-elo" style="color:var(--gold);font-size:14px;font-weight:600;letter-spacing:1px"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:8px">
+        <div style="text-align:center;background:rgba(255,255,255,0.03);border-radius:10px;padding:12px">
+          <div id="profile-wins" style="font-size:24px;font-weight:800;color:var(--green)"></div>
+          <div style="font-size:10px;letter-spacing:1px;color:var(--grey);margin-top:2px">VITTORIE</div>
+        </div>
+        <div style="text-align:center;background:rgba(255,255,255,0.03);border-radius:10px;padding:12px">
+          <div id="profile-losses" style="font-size:24px;font-weight:800;color:var(--red)"></div>
+          <div style="font-size:10px;letter-spacing:1px;color:var(--grey);margin-top:2px">SCONFITTE</div>
+        </div>
+        <div style="text-align:center;background:rgba(255,255,255,0.03);border-radius:10px;padding:12px">
+          <div id="profile-ignorant" style="font-size:24px;font-weight:800;color:var(--gold)"></div>
+          <div style="font-size:10px;letter-spacing:1px;color:var(--grey);margin-top:2px">😂 PTS</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">Storico Partite</div>
+    <div id="profile-matches"></div>
+  </div>
+</div>
+
 <!-- ═══ HISTORY ═══ -->
 
 <div id="screen-history" class="screen">
@@ -449,6 +483,7 @@ function showScreen(name){
   if(name==='admin') renderAdmin();
   if(name==='newmatch') renderNewMatch();
   if(name==='history') renderHistory();
+  if(name==='player') renderPlayerProfile();
 }
 window.showScreen=showScreen;
 
@@ -547,9 +582,9 @@ function renderDashboard(){
   const medals=['🥇','🥈','🥉'];
   document.getElementById('dash-leaderboard').innerHTML=members.map((m,i)=>{
     const isMe=m.userId===currentUser.id;
-    return `<div class="lb-row${isMe?' me':''}">
+    return `<div class="lb-row${isMe?' me':''}" onclick="openPlayer('${m.userId}')" style="cursor:pointer">
       <span style="width:28px;color:${i===0?'#c9a84c':i===1?'#aaa':i===2?'#b07a4f':'var(--grey2)'}">${i<3?medals[i]:i+1}</span>
-      <span style="flex:1;color:${isMe?'var(--gold)':'var(--white)'};font-weight:${isMe?600:400}">${m.userName}</span>
+      <span style="flex:1;color:${isMe?'var(--gold)':'var(--white)'};font-weight:${isMe?700:400}">${m.userName}</span>
       <span style="width:64px;text-align:right;color:var(--gold);font-weight:600">${m.rating}</span>
       <span style="width:36px;text-align:right;color:var(--green)">${m.wins}</span>
       <span style="width:36px;text-align:right;color:var(--red)">${m.losses}</span>
@@ -782,6 +817,51 @@ window.rejectMatch=async function(){
   showScreen('dashboard');
 };
 
+// ── PLAYER PROFILE ──
+let profileUserId = null;
+window.openPlayer=function(uid){
+  profileUserId=uid;
+  showScreen('player');
+};
+function renderPlayerProfile(){
+  if(!profileUserId) return;
+  const user=state.users[profileUserId];
+  const mem=vals(state.memberships).find(m=>m.userId===profileUserId);
+  if(!user||!mem) return;
+  document.getElementById('profile-title').textContent=user.name;
+  document.getElementById('profile-name').textContent=user.name;
+  document.getElementById('profile-elo').textContent=mem.rating+' ELO';
+  document.getElementById('profile-wins').textContent=mem.wins;
+  document.getElementById('profile-losses').textContent=mem.losses;
+  document.getElementById('profile-ignorant').textContent=(mem.ignorantPoints||0).toFixed(1);
+  // matches involving this player
+  const matches=vals(state.matches)
+    .filter(m=>m.status==='confirmed'&&(m.p1Id===profileUserId||m.p2Id===profileUserId))
+    .sort((a,b)=>b.id.localeCompare(a.id));
+  const c=document.getElementById('profile-matches');
+  if(!matches.length){c.innerHTML='<div class="empty-state"><p>Nessuna partita ancora</p></div>';return;}
+  c.innerHTML=matches.map(m=>{
+    const oppId=m.p1Id===profileUserId?m.p2Id:m.p1Id;
+    const opp=state.users[oppId];
+    const won=m.winner===profileUserId;
+    const sc=won?'var(--green)':'var(--red)';
+    const sl=won?'VINTA':'PERSA';
+    const sh=m.sets.map(s=>{
+      const myG=m.p1Id===profileUserId?s.p1:s.p2, oppG=m.p1Id===profileUserId?s.p2:s.p1;
+      const tbTxt=(s.tb1!=null&&s.tb2!=null)?`<sup style="font-size:9px;color:var(--grey)">${m.p1Id===profileUserId?s.tb1:s.tb2}</sup>`:'';
+      return `<span style="color:${myG>oppG?'var(--gold)':'var(--grey)'};font-size:15px;font-weight:700">${myG}–${oppG}${tbTxt}</span>`;
+    }).join(' ');
+    const eloLine=m.eloChange?`<div style="font-size:11px;color:${won?'var(--green)':'var(--red)'};margin-top:4px">${won?'+':'−'}${m.eloChange} ELO</div>`:'';
+    return `<div class="history-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <span style="color:var(--white);font-weight:600">vs ${opp?.name}</span>
+        <span style="color:${sc};font-size:10px;font-weight:700;letter-spacing:1px">${sl}</span>
+      </div>
+      <div style="display:flex;gap:10px">${sh}</div>${eloLine}
+    </div>`;
+  }).join('');
+}
+
 // ── HISTORY ──
 function renderHistory(){
   if(!currentUser) return;
@@ -800,7 +880,7 @@ function renderHistory(){
     const sh=m.sets.map(s=>{
       const myG=m.p1Id===currentUser.id?s.p1:s.p2, oppG=m.p1Id===currentUser.id?s.p2:s.p1;
       const tbTxt=(s.tb1!=null&&s.tb2!=null)?`<sup style="font-size:9px;color:var(--grey)">${m.p1Id===currentUser.id?s.tb1:s.tb2}</sup>`:'';
-      return `<span style="color:${myG>oppG?'var(--gold)':'var(--grey)'};font-size:15px;font-family:'Cormorant Garamond',serif;font-weight:600">${myG}–${oppG}${tbTxt}</span>`;
+      return `<span style="color:${myG>oppG?'var(--gold)':'var(--grey)'};font-size:15px;font-weight:700">${myG}–${oppG}${tbTxt}</span>`;
     }).join(' ');
     const el=m.status==='confirmed'&&m.eloChange?`<div style="margin-top:6px;font-size:11px;letter-spacing:1px;color:${won?'var(--green)':'var(--red)'}">${won?'+':'−'}${m.eloChange} ELO</div>`:'';
     return `<div class="history-card">
