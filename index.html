@@ -24,16 +24,16 @@
   --border:rgba(255,255,255,0.07);
   --card:rgba(255,255,255,0.03);
 }
-html,body{min-height:100vh;background:var(--navy);color:var(--white);font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden}
+html,body{min-height:100vh;background:#0a0e1a;color:#f0ede8;font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden}
 
 /* TEXTURE BG */
 body::before{content:’’;position:fixed;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(201,168,76,0.05) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(201,168,76,0.04) 0%,transparent 50%);pointer-events:none;z-index:0}
 
 /* LOADING */
-#loading-overlay{position:fixed;inset:0;background:var(–navy);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px}
-.spinner{width:36px;height:36px;border:2px solid rgba(201,168,76,0.2);border-top:2px solid var(–gold);border-radius:50%;animation:spin 1s linear infinite}
+#loading-overlay{position:fixed;inset:0;background:#0a0e1a;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px}
+.spinner{width:36px;height:36px;border:2px solid rgba(201,168,76,0.2);border-top:2px solid #c9a84c;border-radius:50%;animation:spin 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.loading-text{font-family:‘Cormorant Garamond’,serif;color:var(–gold);font-size:13px;letter-spacing:4px;text-transform:uppercase}
+.loading-text{font-family:‘Cormorant Garamond’,serif;color:#c9a84c;font-size:13px;letter-spacing:4px;text-transform:uppercase}
 
 /* TOAST */
 #toast{position:fixed;top:24px;left:50%;transform:translateX(-50%);border-radius:6px;padding:10px 20px;font-weight:500;font-size:13px;z-index:999;box-shadow:0 8px 32px rgba(0,0,0,0.4);white-space:nowrap;display:none;letter-spacing:0.5px}
@@ -44,43 +44,43 @@ body::before{content:’’;position:fixed;inset:0;background:radial-gradient(el
 .screen.center{align-items:center;justify-content:center;padding:24px}
 
 /* DIVIDER */
-.gold-divider{width:40px;height:1px;background:linear-gradient(90deg,transparent,var(–gold),transparent);margin:0 auto}
+.gold-divider{width:40px;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:0 auto}
 
 /* CARD */
-.card{background:var(–navy2);border:1px solid var(–gold-border);border-radius:4px;padding:36px 32px;width:100%;max-width:360px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
-.card::before{content:’’;position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(–gold),transparent)}
+.card{background:#111827;border:1px solid rgba(201,168,76,0.25);border-radius:4px;padding:36px 32px;width:100%;max-width:360px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+.card::before{content:’’;position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#c9a84c,transparent)}
 
 /* LOGO */
 .logo-wrap{text-align:center;margin-bottom:4px}
 .logo-emblem{font-size:32px;display:block;margin-bottom:12px}
-.logo-text{font-family:‘Nunito’,sans-serif;color:var(–gold);font-size:32px;font-weight:900;letter-spacing:6px;display:block}
-.logo-sub{color:var(–grey);font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-top:6px;display:block}
+.logo-text{font-family:‘Nunito’,sans-serif;color:#c9a84c;font-size:32px;font-weight:900;letter-spacing:6px;display:block}
+.logo-sub{color:#8a8fa8;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-top:6px;display:block}
 
 /* INPUTS */
-input,select{background:rgba(255,255,255,0.04);border:1px solid var(–border);border-bottom:1px solid var(–grey2);border-radius:0;color:var(–white);font-size:15px;padding:12px 14px;width:100%;outline:none;font-family:‘Plus Jakarta Sans’,sans-serif;transition:border-color 0.2s;-webkit-appearance:none}
-input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus{-webkit-text-fill-color:var(–white);-webkit-box-shadow:0 0 0px 1000px #111827 inset;transition:background-color 5000s ease-in-out 0s}
-input:focus,select:focus{border-bottom-color:var(–gold);background:rgba(201,168,76,0.04)}
-input::placeholder{color:var(–grey2)}
+input,select{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-bottom:1px solid #4a5068;border-radius:0;color:#f0ede8;font-size:15px;padding:12px 14px;width:100%;outline:none;font-family:‘Plus Jakarta Sans’,sans-serif;transition:border-color 0.2s;-webkit-appearance:none}
+input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus{-webkit-text-fill-color:#f0ede8;-webkit-box-shadow:0 0 0px 1000px #111827 inset;transition:background-color 5000s ease-in-out 0s}
+input:focus,select:focus{border-bottom-color:#c9a84c;background:rgba(201,168,76,0.04)}
+input::placeholder{color:#4a5068}
 select option{background:#1a2235}
-label.field-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(–grey);margin-bottom:4px;display:block}
+label.field-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a8fa8;margin-bottom:4px;display:block}
 
 /* BUTTONS */
-.btn-primary{background:linear-gradient(135deg,var(–gold),var(–gold2));color:#0a0e1a;border:none;border-radius:10px;padding:14px 0;width:100%;font-weight:700;font-size:14px;cursor:pointer;letter-spacing:1px;text-transform:uppercase;font-family:‘Plus Jakarta Sans’,sans-serif;transition:opacity 0.2s}
+.btn-primary{background:linear-gradient(135deg,#c9a84c,#e8c97a);color:#0a0e1a;border:none;border-radius:10px;padding:14px 0;width:100%;font-weight:700;font-size:14px;cursor:pointer;letter-spacing:1px;text-transform:uppercase;font-family:‘Plus Jakarta Sans’,sans-serif;transition:opacity 0.2s}
 .btn-primary:hover{opacity:0.9}
-.btn-ghost{background:transparent;color:var(–grey);border:1px solid var(–border);border-radius:10px;padding:12px 0;width:100%;font-size:13px;cursor:pointer;font-family:‘Plus Jakarta Sans’,sans-serif;letter-spacing:0.5px;transition:border-color 0.2s}
-.btn-ghost:hover{border-color:var(–gold-border);color:var(–gold)}
-.btn-link{background:transparent;color:var(–grey2);border:none;font-size:12px;cursor:pointer;font-family:‘Plus Jakarta Sans’,sans-serif;padding:4px 0;letter-spacing:0.5px}
-.btn-link:hover{color:var(–gold)}
-.btn-small{background:rgba(255,255,255,0.04);color:var(–grey);border:1px solid var(–border);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;font-family:‘Plus Jakarta Sans’,sans-serif;letter-spacing:0.5px;transition:all 0.2s}
-.btn-small:hover{border-color:var(–gold-border);color:var(–gold)}
-.btn-danger{background:rgba(224,85,85,0.1);color:var(–red);border:1px solid rgba(224,85,85,0.25);border-radius:8px;padding:6px 10px;font-size:12px;cursor:pointer;font-family:‘Plus Jakarta Sans’,sans-serif}
-.btn-counter{background:rgba(255,255,255,0.06);color:var(–white);border:1px solid var(–border);border-radius:8px;width:30px;height:30px;cursor:pointer;font-size:16px;display:inline-flex;align-items:center;justify-content:center;font-family:‘Plus Jakarta Sans’,sans-serif;transition:all 0.2s}
-.btn-counter:hover{border-color:var(–gold-border);color:var(–gold)}
+.btn-ghost{background:transparent;color:#8a8fa8;border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px 0;width:100%;font-size:13px;cursor:pointer;font-family:‘Plus Jakarta Sans’,sans-serif;letter-spacing:0.5px;transition:border-color 0.2s}
+.btn-ghost:hover{border-color:rgba(201,168,76,0.25);color:#c9a84c}
+.btn-link{background:transparent;color:#4a5068;border:none;font-size:12px;cursor:pointer;font-family:‘Plus Jakarta Sans’,sans-serif;padding:4px 0;letter-spacing:0.5px}
+.btn-link:hover{color:#c9a84c}
+.btn-small{background:rgba(255,255,255,0.04);color:#8a8fa8;border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;font-family:‘Plus Jakarta Sans’,sans-serif;letter-spacing:0.5px;transition:all 0.2s}
+.btn-small:hover{border-color:rgba(201,168,76,0.25);color:#c9a84c}
+.btn-danger{background:rgba(224,85,85,0.1);color:#e05555;border:1px solid rgba(224,85,85,0.25);border-radius:8px;padding:6px 10px;font-size:12px;cursor:pointer;font-family:‘Plus Jakarta Sans’,sans-serif}
+.btn-counter{background:rgba(255,255,255,0.06);color:#f0ede8;border:1px solid rgba(255,255,255,0.07);border-radius:8px;width:30px;height:30px;cursor:pointer;font-size:16px;display:inline-flex;align-items:center;justify-content:center;font-family:‘Plus Jakarta Sans’,sans-serif;transition:all 0.2s}
+.btn-counter:hover{border-color:rgba(201,168,76,0.25);color:#c9a84c}
 
 /* PAGE HEADER */
-.page-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(–border);background:rgba(10,14,26,0.95);backdrop-filter:blur(12px);position:sticky;top:0;z-index:10}
-.header-logo{font-family:‘Cormorant Garamond’,serif;color:var(–gold);font-weight:700;font-size:18px;letter-spacing:3px}
-.header-name{color:var(–grey);font-size:12px;letter-spacing:1px}
+.page-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(10,14,26,0.95);backdrop-filter:blur(12px);position:sticky;top:0;z-index:10}
+.header-logo{font-family:‘Cormorant Garamond’,serif;color:#c9a84c;font-weight:700;font-size:18px;letter-spacing:3px}
+.header-name{color:#8a8fa8;font-size:12px;letter-spacing:1px}
 .header-actions{display:flex;gap:8px}
 
 /* CONTENT */
@@ -88,75 +88,75 @@ label.field-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;col
 
 /* SECTION */
 .section{margin-bottom:28px}
-.section-title{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(–gold);margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.section-title::after{content:’’;flex:1;height:1px;background:linear-gradient(90deg,var(–gold-border),transparent)}
+.section-title{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.section-title::after{content:’’;flex:1;height:1px;background:linear-gradient(90deg,rgba(201,168,76,0.25),transparent)}
 
 /* LEAGUE BANNER */
-.league-banner{background:linear-gradient(135deg,var(–navy2),var(–navy3));border:1px solid var(–gold-border);border-radius:4px;padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden}
-.league-banner::before{content:’’;position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(–gold),transparent)}
-.league-banner-name{font-family:‘Cormorant Garamond’,serif;color:var(–white);font-size:20px;font-weight:600;letter-spacing:1px}
-.league-banner-elo{color:var(–gold);font-weight:600;font-size:14px;letter-spacing:1px}
+.league-banner{background:linear-gradient(135deg,#111827,#1a2235);border:1px solid rgba(201,168,76,0.25);border-radius:4px;padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden}
+.league-banner::before{content:’’;position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent)}
+.league-banner-name{font-family:‘Cormorant Garamond’,serif;color:#f0ede8;font-size:20px;font-weight:600;letter-spacing:1px}
+.league-banner-elo{color:#c9a84c;font-weight:600;font-size:14px;letter-spacing:1px}
 
 /* LEADERBOARD */
-.lb-table{border:1px solid var(–border);border-radius:4px;overflow:hidden}
-.lb-header{display:flex;padding:10px 16px;background:rgba(201,168,76,0.06);border-bottom:1px solid var(–border);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(–grey)}
+.lb-table{border:1px solid rgba(255,255,255,0.07);border-radius:4px;overflow:hidden}
+.lb-header{display:flex;padding:10px 16px;background:rgba(201,168,76,0.06);border-bottom:1px solid rgba(255,255,255,0.07);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#8a8fa8}
 .lb-row{display:flex;padding:13px 16px;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.03);transition:background 0.15s}
 .lb-row:last-child{border-bottom:none}
 .lb-row.me{background:rgba(201,168,76,0.06)}
 
 /* PENDING */
-.pending-card{display:flex;justify-content:space-between;align-items:center;background:rgba(201,168,76,0.05);border:1px solid var(–gold-border);border-radius:4px;padding:14px 16px;margin-bottom:8px;cursor:pointer;transition:background 0.2s}
+.pending-card{display:flex;justify-content:space-between;align-items:center;background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.25);border-radius:4px;padding:14px 16px;margin-bottom:8px;cursor:pointer;transition:background 0.2s}
 .pending-card:hover{background:rgba(201,168,76,0.09)}
-.pending-label{color:var(–white);font-size:13px}
-.pending-cta{color:var(–gold);font-size:12px;font-weight:600;letter-spacing:1px}
+.pending-label{color:#f0ede8;font-size:13px}
+.pending-cta{color:#c9a84c;font-size:12px;font-weight:600;letter-spacing:1px}
 
 /* MEMBER ROW */
-.member-row{display:flex;align-items:center;background:var(–card);border:1px solid var(–border);border-radius:4px;padding:12px 14px;margin-bottom:6px}
+.member-row{display:flex;align-items:center;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:4px;padding:12px 14px;margin-bottom:6px}
 
 /* SET INPUT */
-.set-block{background:var(–navy2);border:1px solid var(–border);border-radius:4px;padding:14px;margin-bottom:8px}
-.set-block-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(–grey);margin-bottom:10px}
+.set-block{background:#111827;border:1px solid rgba(255,255,255,0.07);border-radius:4px;padding:14px;margin-bottom:8px}
+.set-block-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a8fa8;margin-bottom:10px}
 .set-inputs{display:flex;align-items:center;gap:10px}
 .set-inputs input{flex:1;margin:0;text-align:center;font-size:22px;font-weight:600;padding:10px;font-family:‘Cormorant Garamond’,serif}
-.set-sep{color:var(–grey2);font-size:20px;font-family:‘Cormorant Garamond’,serif}
-.tb-row{margin-top:10px;padding-top:10px;border-top:1px solid var(–border);display:none}
+.set-sep{color:#4a5068;font-size:20px;font-family:‘Cormorant Garamond’,serif}
+.tb-row{margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.07);display:none}
 .tb-row.visible{display:block}
-.tb-row label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(–gold);margin-bottom:6px;display:block}
+.tb-row label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#c9a84c;margin-bottom:6px;display:block}
 .tb-inputs{display:flex;align-items:center;gap:8px}
 .tb-inputs input{flex:1;margin:0;text-align:center;font-size:16px;padding:8px}
 
 /* IGNORANT */
 .ignorant-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.ignorant-item{background:var(–navy2);border:1px solid var(–border);border-radius:4px;padding:12px;display:flex;flex-direction:column;align-items:center;gap:8px}
-.ignorant-label{font-size:11px;color:var(–grey);text-align:center;letter-spacing:0.5px}
+.ignorant-item{background:#111827;border:1px solid rgba(255,255,255,0.07);border-radius:4px;padding:12px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.ignorant-label{font-size:11px;color:#8a8fa8;text-align:center;letter-spacing:0.5px}
 .ignorant-controls{display:flex;align-items:center;gap:10px}
-.ignorant-val{color:var(–gold);font-weight:700;min-width:20px;text-align:center;font-size:16px;font-family:‘Cormorant Garamond’,serif}
+.ignorant-val{color:#c9a84c;font-weight:700;min-width:20px;text-align:center;font-size:16px;font-family:‘Cormorant Garamond’,serif}
 
 /* CONFIRM */
-.confirm-card{background:var(–navy2);border:1px solid var(–gold-border);border-radius:4px;padding:28px;position:relative;overflow:hidden}
-.confirm-card::before{content:’’;position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(–gold),transparent)}
+.confirm-card{background:#111827;border:1px solid rgba(201,168,76,0.25);border-radius:4px;padding:28px;position:relative;overflow:hidden}
+.confirm-card::before{content:’’;position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent)}
 .vs-wrap{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
 .vs-player{text-align:center;flex:1}
-.vs-name{color:var(–white);font-size:17px;font-weight:600}
-.vs-elo{color:var(–grey);font-size:11px;margin-top:4px;letter-spacing:1px}
-.vs-divider{color:var(–grey2);font-family:‘Cormorant Garamond’,serif;font-size:28px;padding:0 8px}
+.vs-name{color:#f0ede8;font-size:17px;font-weight:600}
+.vs-elo{color:#8a8fa8;font-size:11px;margin-top:4px;letter-spacing:1px}
+.vs-divider{color:#4a5068;font-family:‘Cormorant Garamond’,serif;font-size:28px;padding:0 8px}
 .set-scores{display:flex;justify-content:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
-.set-score-pill{background:rgba(255,255,255,0.04);border:1px solid var(–border);border-radius:4px;padding:8px 16px;text-align:center}
+.set-score-pill{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:4px;padding:8px 16px;text-align:center}
 .set-score-main{display:flex;gap:6px;font-size:22px;font-weight:700;font-family:‘Cormorant Garamond’,serif}
-.set-score-tb{font-size:10px;color:var(–grey);letter-spacing:1px;margin-top:2px;text-align:center}
-.winner-line{text-align:center;margin-bottom:20px;padding:12px;background:var(–gold-dim);border:1px solid var(–gold-border);border-radius:3px}
-.winner-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(–gold);margin-bottom:4px}
-.winner-name-text{color:var(–white);font-family:‘Cormorant Garamond’,serif;font-size:20px;font-weight:600}
-.ignorant-box{background:rgba(201,168,76,0.04);border:1px solid var(–gold-border);border-radius:3px;padding:14px;margin-bottom:20px}
-.ignorant-box-title{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(–gold);margin-bottom:8px}
-.ignorant-box p{color:var(–grey);font-size:12px;margin-bottom:3px}
+.set-score-tb{font-size:10px;color:#8a8fa8;letter-spacing:1px;margin-top:2px;text-align:center}
+.winner-line{text-align:center;margin-bottom:20px;padding:12px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.25);border-radius:3px}
+.winner-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#c9a84c;margin-bottom:4px}
+.winner-name-text{color:#f0ede8;font-family:‘Cormorant Garamond’,serif;font-size:20px;font-weight:600}
+.ignorant-box{background:rgba(201,168,76,0.04);border:1px solid rgba(201,168,76,0.25);border-radius:3px;padding:14px;margin-bottom:20px}
+.ignorant-box-title{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#c9a84c;margin-bottom:8px}
+.ignorant-box p{color:#8a8fa8;font-size:12px;margin-bottom:3px}
 
 /* HISTORY */
-.history-card{background:var(–navy2);border:1px solid var(–border);border-radius:4px;padding:16px;margin-bottom:8px;transition:border-color 0.2s}
-.history-card:hover{border-color:var(–gold-border)}
+.history-card{background:#111827;border:1px solid rgba(255,255,255,0.07);border-radius:4px;padding:16px;margin-bottom:8px;transition:border-color 0.2s}
+.history-card:hover{border-color:rgba(201,168,76,0.25)}
 
 /* EMPTY */
-.empty-state{display:flex;align-items:center;justify-content:center;min-height:200px;color:var(–grey);text-align:center;line-height:1.6}
+.empty-state{display:flex;align-items:center;justify-content:center;min-height:200px;color:#8a8fa8;text-align:center;line-height:1.6}
 
 /* FLEX UTILS */
 .flex{display:flex}.gap-8{gap:8px}.gap-12{gap:12px}.flex-1{flex:1}.mt-12{margin-top:12px}
@@ -294,7 +294,7 @@ label.field-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;col
     <div id="admin-manage-section" style="display:none">
       <div class="league-banner" style="margin-bottom:24px">
         <span class="league-banner-name" id="admin-league-title"></span>
-        <span style="color:var(--grey);font-size:12px;letter-spacing:1px" id="admin-member-count"></span>
+        <span style="color:#8a8fa8;font-size:12px;letter-spacing:1px" id="admin-member-count"></span>
       </div>
       <div class="section">
         <div class="section-title">Aggiungi Giocatore</div>
@@ -330,16 +330,16 @@ label.field-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;col
         </div>
       </div>
       <div style="display:flex;gap:8px;margin-bottom:8px;padding:0 4px">
-        <span style="flex:1;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)">TU</span>
+        <span style="flex:1;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c9a84c">TU</span>
         <span style="width:24px"></span>
-        <span style="flex:1;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--grey)" id="nm-opp-label">AVV.</span>
+        <span style="flex:1;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a8fa8" id="nm-opp-label">AVV.</span>
       </div>
       <div id="nm-sets"></div>
     </div>
     <div class="section">
       <div class="section-title">Punti Ignoranti</div>
       <div class="ignorant-grid" id="nm-ignorant"></div>
-      <p style="color:var(--grey2);font-size:11px;margin-top:10px;letter-spacing:0.5px">Ace +0.5 a chi li fa · Doppio Fallo / Racchetta +0.5 all'avversario</p>
+      <p style="color:#4a5068;font-size:11px;margin-top:10px;letter-spacing:0.5px">Ace +0.5 a chi li fa · Doppio Fallo / Racchetta +0.5 all'avversario</p>
     </div>
     <button class="btn-primary" onclick="submitMatch()">Invia per Conferma</button>
   </div>
@@ -354,7 +354,7 @@ label.field-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;col
   </div>
   <div class="page-content">
     <div class="confirm-card">
-      <p style="font-size:11px;color:var(--grey);margin-bottom:20px;letter-spacing:1px">Inserita da <b id="conf-p1-name" style="color:var(--gold)"></b></p>
+      <p style="font-size:11px;color:#8a8fa8;margin-bottom:20px;letter-spacing:1px">Inserita da <b id="conf-p1-name" style="color:#c9a84c"></b></p>
       <div class="vs-wrap">
         <div class="vs-player"><div class="vs-name" id="conf-p1"></div><div class="vs-elo" id="conf-p1-elo"></div></div>
         <div class="vs-divider">vs</div>
@@ -381,22 +381,22 @@ label.field-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;col
   <div class="page-content">
     <div class="confirm-card" style="margin-bottom:20px">
       <div style="text-align:center;padding:8px 0 16px">
-        <div id="profile-avatar" style="width:64px;height:64px;border-radius:50%;background:var(--gold-dim);border:2px solid var(--gold-border);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:26px">🎾</div>
-        <div id="profile-name" style="font-size:22px;font-weight:800;color:var(--white);margin-bottom:4px"></div>
-        <div id="profile-elo" style="color:var(--gold);font-size:14px;font-weight:600;letter-spacing:1px"></div>
+        <div id="profile-avatar" style="width:64px;height:64px;border-radius:50%;background:rgba(201,168,76,0.15);border:2px solid rgba(201,168,76,0.25);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:26px">🎾</div>
+        <div id="profile-name" style="font-size:22px;font-weight:800;color:#f0ede8;margin-bottom:4px"></div>
+        <div id="profile-elo" style="color:#c9a84c;font-size:14px;font-weight:600;letter-spacing:1px"></div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:8px">
         <div style="text-align:center;background:rgba(255,255,255,0.03);border-radius:10px;padding:12px">
-          <div id="profile-wins" style="font-size:24px;font-weight:800;color:var(--green)"></div>
-          <div style="font-size:10px;letter-spacing:1px;color:var(--grey);margin-top:2px">VITTORIE</div>
+          <div id="profile-wins" style="font-size:24px;font-weight:800;color:#4caf7d"></div>
+          <div style="font-size:10px;letter-spacing:1px;color:#8a8fa8;margin-top:2px">VITTORIE</div>
         </div>
         <div style="text-align:center;background:rgba(255,255,255,0.03);border-radius:10px;padding:12px">
-          <div id="profile-losses" style="font-size:24px;font-weight:800;color:var(--red)"></div>
-          <div style="font-size:10px;letter-spacing:1px;color:var(--grey);margin-top:2px">SCONFITTE</div>
+          <div id="profile-losses" style="font-size:24px;font-weight:800;color:#e05555"></div>
+          <div style="font-size:10px;letter-spacing:1px;color:#8a8fa8;margin-top:2px">SCONFITTE</div>
         </div>
         <div style="text-align:center;background:rgba(255,255,255,0.03);border-radius:10px;padding:12px">
-          <div id="profile-ignorant" style="font-size:24px;font-weight:800;color:var(--gold)"></div>
-          <div style="font-size:10px;letter-spacing:1px;color:var(--grey);margin-top:2px">😂 PTS</div>
+          <div id="profile-ignorant" style="font-size:24px;font-weight:800;color:#c9a84c"></div>
+          <div style="font-size:10px;letter-spacing:1px;color:#8a8fa8;margin-top:2px">😂 PTS</div>
         </div>
       </div>
     </div>
@@ -407,19 +407,19 @@ label.field-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;col
   <div class="section-title">Se giocassi contro di lui</div>
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
     <div style="background:rgba(76,175,125,0.08);border:1px solid rgba(76,175,125,0.25);border-radius:10px;padding:12px;text-align:center">
-      <div style="font-size:10px;letter-spacing:1px;color:var(--green);margin-bottom:6px">VITTORIA NETTA</div>
-      <div id="preview-win-big" style="font-size:22px;font-weight:800;color:var(--green)"></div>
-      <div style="font-size:10px;color:var(--grey);margin-top:2px">Pt</div>
+      <div style="font-size:10px;letter-spacing:1px;color:#4caf7d;margin-bottom:6px">VITTORIA NETTA</div>
+      <div id="preview-win-big" style="font-size:22px;font-weight:800;color:#4caf7d"></div>
+      <div style="font-size:10px;color:#8a8fa8;margin-top:2px">Pt</div>
     </div>
     <div style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:10px;padding:12px;text-align:center">
-      <div style="font-size:10px;letter-spacing:1px;color:var(--gold);margin-bottom:6px">VITTORIA TIRATA</div>
-      <div id="preview-win-close" style="font-size:22px;font-weight:800;color:var(--gold)"></div>
-      <div style="font-size:10px;color:var(--grey);margin-top:2px">Pt</div>
+      <div style="font-size:10px;letter-spacing:1px;color:#c9a84c;margin-bottom:6px">VITTORIA TIRATA</div>
+      <div id="preview-win-close" style="font-size:22px;font-weight:800;color:#c9a84c"></div>
+      <div style="font-size:10px;color:#8a8fa8;margin-top:2px">Pt</div>
     </div>
     <div style="background:rgba(224,85,85,0.08);border:1px solid rgba(224,85,85,0.2);border-radius:10px;padding:12px;text-align:center">
-      <div style="font-size:10px;letter-spacing:1px;color:var(--red);margin-bottom:6px">SCONFITTA</div>
-      <div id="preview-lose" style="font-size:22px;font-weight:800;color:var(--red)"></div>
-      <div style="font-size:10px;color:var(--grey);margin-top:2px">Pt</div>
+      <div style="font-size:10px;letter-spacing:1px;color:#e05555;margin-bottom:6px">SCONFITTA</div>
+      <div id="preview-lose" style="font-size:22px;font-weight:800;color:#e05555"></div>
+      <div style="font-size:10px;color:#8a8fa8;margin-top:2px">Pt</div>
     </div>
   </div>
 </div>
@@ -637,7 +637,7 @@ pendDiv.style.display=‘block’;
 document.getElementById(‘dash-pending-title’).textContent=`Da Confermare (${pending.length})`;
 document.getElementById(‘dash-pending-list’).innerHTML=pending.map(m=>{
 const p1=state.users[m.p1Id];
-return `<div class="pending-card" onclick="openConfirm('${m.id}')"><span class="pending-label"><b style="color:var(--white)">${p1?.name}</b> ha inserito un risultato</span><span class="pending-cta">Conferma →</span></div>`;
+return `<div class="pending-card" onclick="openConfirm('${m.id}')"><span class="pending-label"><b style="color:#f0ede8">${p1?.name}</b> ha inserito un risultato</span><span class="pending-cta">Conferma →</span></div>`;
 }).join(’’);
 } else { pendDiv.style.display=‘none’; }
 const members=vals(state.memberships).filter(m=>m.leagueId===league.id)
@@ -646,7 +646,7 @@ const members=vals(state.memberships).filter(m=>m.leagueId===league.id)
 const medals=[‘🥇’,‘🥈’,‘🥉’];
 document.getElementById(‘dash-leaderboard’).innerHTML=members.map((m,i)=>{
 const isMe=m.userId===currentUser.id;
-return `<div class="lb-row${isMe?' me':''}" onclick="openPlayer('${m.userId}')" style="cursor:pointer"> <span style="width:28px;color:${i===0?'#c9a84c':i===1?'#aaa':i===2?'#b07a4f':'var(--grey2)'}">${i<3?medals[i]:i+1}</span> <span style="flex:1;color:${isMe?'var(--gold)':'var(--white)'};font-weight:${isMe?700:400}">${m.userName}</span> <span style="width:64px;text-align:right;color:var(--gold);font-weight:600">${m.rating}</span> <span style="width:36px;text-align:right;color:var(--green)">${m.wins}</span> <span style="width:36px;text-align:right;color:var(--red)">${m.losses}</span> <span style="width:46px;text-align:right;color:var(--grey);font-size:12px">${(m.ignorantPoints||0).toFixed(1)}</span> </div>`;
+return `<div class="lb-row${isMe?' me':''}" onclick="openPlayer('${m.userId}')" style="cursor:pointer"> <span style="width:28px;color:${i===0?'#c9a84c':i===1?'#aaa':i===2?'#b07a4f':'#4a5068'}">${i<3?medals[i]:i+1}</span> <span style="flex:1;color:${isMe?'#c9a84c':'#f0ede8'};font-weight:${isMe?700:400}">${m.userName}</span> <span style="width:64px;text-align:right;color:#c9a84c;font-weight:600">${m.rating}</span> <span style="width:36px;text-align:right;color:#4caf7d">${m.wins}</span> <span style="width:36px;text-align:right;color:#e05555">${m.losses}</span> <span style="width:46px;text-align:right;color:#8a8fa8;font-size:12px">${(m.ignorantPoints||0).toFixed(1)}</span> </div>`;
 }).join(’’);
 }
 
@@ -668,7 +668,7 @@ function renderAdminMembers(myLeague){
 const members=vals(state.memberships).filter(m=>m.leagueId===myLeague.id)
 .map(m=>({…m,userName:state.users[m.userId]?.name||’?’}));
 document.getElementById(‘admin-member-count’).textContent=members.length+’ giocatori’;
-document.getElementById(‘admin-members-list’).innerHTML=members.map(m=>` <div id="mwrap-${m.userId}"> <div class="member-row"> <span style="flex:1;color:var(--white)">${m.userName}</span> <span style="color:var(--gold);font-size:12px;margin-right:8px;letter-spacing:1px">${m.rating} Pt</span> <button class="btn-small" style="margin-right:6px" onclick="toggleReset('${m.userId}')">🔑</button> ${m.userId!==currentUser.id?`<button class="btn-danger" onclick="removePlayer('${m.userId}')">✕</button>`:''} </div> <div id="rrow-${m.userId}" style="display:none;gap:8px;margin-bottom:8px;padding-left:8px"> <input type="password" id="rpass-${m.userId}" placeholder="Nuova password" style="flex:1;margin:0;font-size:13px"/> <button class="btn-primary" style="width:auto;padding:0 16px;font-size:12px" onclick="adminResetPass('${m.userId}')">Salva</button> </div> </div>`).join(’’);
+document.getElementById(‘admin-members-list’).innerHTML=members.map(m=>` <div id="mwrap-${m.userId}"> <div class="member-row"> <span style="flex:1;color:#f0ede8">${m.userName}</span> <span style="color:#c9a84c;font-size:12px;margin-right:8px;letter-spacing:1px">${m.rating} Pt</span> <button class="btn-small" style="margin-right:6px" onclick="toggleReset('${m.userId}')">🔑</button> ${m.userId!==currentUser.id?`<button class="btn-danger" onclick="removePlayer('${m.userId}')">✕</button>`:''} </div> <div id="rrow-${m.userId}" style="display:none;gap:8px;margin-bottom:8px;padding-left:8px"> <input type="password" id="rpass-${m.userId}" placeholder="Nuova password" style="flex:1;margin:0;font-size:13px"/> <button class="btn-primary" style="width:auto;padding:0 16px;font-size:12px" onclick="adminResetPass('${m.userId}')">Salva</button> </div> </div>`).join(’’);
 }
 window.toggleReset=function(uid){const r=document.getElementById(‘rrow-’+uid);if(r)r.style.display=r.style.display===‘none’?‘flex’:‘none’;};
 window.adminResetPass=async function(uid){
@@ -793,7 +793,7 @@ document.getElementById(‘conf-winner’).textContent=state.users[confirmMatchD
 document.getElementById(‘conf-sets’).innerHTML=confirmMatchData.sets.map(s=>{
 const w1=s.p1>s.p2,w2=s.p2>s.p1;
 const tbText=(s.tb1!=null&&s.tb2!=null)?`<div class="set-score-tb">${s.tb1}–${s.tb2}</div>`:’’;
-return `<div class="set-score-pill"> <div class="set-score-main"> <span style="color:${w1?'var(--gold)':'var(--grey)'}">${s.p1}</span> <span style="color:var(--grey2)">–</span> <span style="color:${w2?'var(--gold)':'var(--grey)'}">${s.p2}</span> </div>${tbText} </div>`;
+return `<div class="set-score-pill"> <div class="set-score-main"> <span style="color:${w1?'#c9a84c':'#8a8fa8'}">${s.p1}</span> <span style="color:#4a5068">–</span> <span style="color:${w2?'#c9a84c':'#8a8fa8'}">${s.p2}</span> </div>${tbText} </div>`;
 }).join(’’);
 const ig=confirmMatchData.ignorant;
 const lines=[];
@@ -803,7 +803,7 @@ if(ig.df_p1>0) lines.push(`😬 D.Fallo ${p1?.name}: ×${ig.df_p1}`);
 if(ig.df_p2>0) lines.push(`😬 D.Fallo ${p2?.name}: ×${ig.df_p2}`);
 if(ig.racket_p1>0) lines.push(`🚀 Racchetta ${p1?.name}: ×${ig.racket_p1}`);
 if(ig.racket_p2>0) lines.push(`🚀 Racchetta ${p2?.name}: ×${ig.racket_p2}`);
-document.getElementById(‘conf-ignorant’).innerHTML=lines.length?lines.map(l=>`<p>${l}</p>`).join(’’):’<p style="color:var(--grey2)">Nessun evento</p>’;
+document.getElementById(‘conf-ignorant’).innerHTML=lines.length?lines.map(l=>`<p>${l}</p>`).join(’’):’<p style="color:#4a5068">Nessun evento</p>’;
 showScreen(‘confirm’);
 };
 
@@ -880,15 +880,15 @@ c.innerHTML=matches.map(m=>{
 const oppId=m.p1Id===profileUserId?m.p2Id:m.p1Id;
 const opp=state.users[oppId];
 const won=m.winner===profileUserId;
-const sc=won?‘var(–green)’:‘var(–red)’;
+const sc=won?’#4caf7d’:’#e05555’;
 const sl=won?‘VINTA’:‘PERSA’;
 const sh=m.sets.map(s=>{
 const myG=m.p1Id===profileUserId?s.p1:s.p2, oppG=m.p1Id===profileUserId?s.p2:s.p1;
-const tbTxt=(s.tb1!=null&&s.tb2!=null)?`<sup style="font-size:9px;color:var(--grey)">${m.p1Id===profileUserId?s.tb1:s.tb2}</sup>`:’’;
-return `<span style="color:${myG>oppG?'var(--gold)':'var(--grey)'};font-size:15px;font-weight:700">${myG}–${oppG}${tbTxt}</span>`;
+const tbTxt=(s.tb1!=null&&s.tb2!=null)?`<sup style="font-size:9px;color:#8a8fa8">${m.p1Id===profileUserId?s.tb1:s.tb2}</sup>`:’’;
+return `<span style="color:${myG>oppG?'#c9a84c':'#8a8fa8'};font-size:15px;font-weight:700">${myG}–${oppG}${tbTxt}</span>`;
 }).join(’ ‘);
-const eloLine=m.eloChange?`<div style="font-size:11px;color:${won?'var(--green)':'var(--red)'};margin-top:4px">${won?'+':'−'}${m.eloChange} Pt</div>`:’’;
-return `<div class="history-card"> <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"> <span style="color:var(--white);font-weight:600">vs ${opp?.name}</span> <span style="color:${sc};font-size:10px;font-weight:700;letter-spacing:1px">${sl}</span> </div> <div style="display:flex;gap:10px">${sh}</div>${eloLine} </div>`;
+const eloLine=m.eloChange?`<div style="font-size:11px;color:${won?'#4caf7d':'#e05555'};margin-top:4px">${won?'+':'−'}${m.eloChange} Pt</div>`:’’;
+return `<div class="history-card"> <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"> <span style="color:#f0ede8;font-weight:600">vs ${opp?.name}</span> <span style="color:${sc};font-size:10px;font-weight:700;letter-spacing:1px">${sl}</span> </div> <div style="display:flex;gap:10px">${sh}</div>${eloLine} </div>`;
 }).join(’’);
 }
 
@@ -903,7 +903,7 @@ if(!campi.length){
 list.innerHTML=’<div class="empty-state"><p>Nessun campo aggiunto ancora.<br>L'admin può aggiungerne.</p></div>’;
 return;
 }
-list.innerHTML=campi.map(c=>` <div class="history-card" style="display:flex;align-items:center;justify-content:space-between"> <div> <div style="color:var(--white);font-weight:600;margin-bottom:4px">${c.nome}</div> <div style="color:var(--grey);font-size:12px">${c.url}</div> </div> <div style="display:flex;gap:8px;flex-shrink:0;margin-left:12px"> <a href="${c.url}" target="_blank" style="display:inline-block"> <button class="btn-primary" style="width:auto;padding:8px 14px;font-size:12px;border-radius:8px">Prenota</button> </a> ${myLeague?`<button class="btn-danger" onclick="removeCampo('${c.id}')">✕</button>`:''} </div> </div>`).join(’’);
+list.innerHTML=campi.map(c=>` <div class="history-card" style="display:flex;align-items:center;justify-content:space-between"> <div> <div style="color:#f0ede8;font-weight:600;margin-bottom:4px">${c.nome}</div> <div style="color:#8a8fa8;font-size:12px">${c.url}</div> </div> <div style="display:flex;gap:8px;flex-shrink:0;margin-left:12px"> <a href="${c.url}" target="_blank" style="display:inline-block"> <button class="btn-primary" style="width:auto;padding:8px 14px;font-size:12px;border-radius:8px">Prenota</button> </a> ${myLeague?`<button class="btn-danger" onclick="removeCampo('${c.id}')">✕</button>`:''} </div> </div>`).join(’’);
 }
 window.addCampo=async function(){
 const myLeague=vals(state.leagues).find(l=>l.adminId===currentUser.id);
@@ -935,15 +935,15 @@ if(!matches.length){c.innerHTML=’<div class="empty-state"><p>Nessuna partita a
 c.innerHTML=matches.map(m=>{
 const opp=state.users[m.p1Id===currentUser.id?m.p2Id:m.p1Id];
 const won=m.winner===currentUser.id;
-const sc=m.status===‘confirmed’?(won?‘var(–green)’:‘var(–red)’):m.status===‘pending’?‘var(–gold)’:‘var(–grey2)’;
+const sc=m.status===‘confirmed’?(won?’#4caf7d’:’#e05555’):m.status===‘pending’?’#c9a84c’:’#4a5068’;
 const sl=m.status===‘confirmed’?(won?‘VITTORIA’:‘SCONFITTA’):m.status===‘pending’?‘IN ATTESA’:‘RIFIUTATA’;
 const sh=m.sets.map(s=>{
 const myG=m.p1Id===currentUser.id?s.p1:s.p2, oppG=m.p1Id===currentUser.id?s.p2:s.p1;
-const tbTxt=(s.tb1!=null&&s.tb2!=null)?`<sup style="font-size:9px;color:var(--grey)">${m.p1Id===currentUser.id?s.tb1:s.tb2}</sup>`:’’;
-return `<span style="color:${myG>oppG?'var(--gold)':'var(--grey)'};font-size:15px;font-weight:700">${myG}–${oppG}${tbTxt}</span>`;
+const tbTxt=(s.tb1!=null&&s.tb2!=null)?`<sup style="font-size:9px;color:#8a8fa8">${m.p1Id===currentUser.id?s.tb1:s.tb2}</sup>`:’’;
+return `<span style="color:${myG>oppG?'#c9a84c':'#8a8fa8'};font-size:15px;font-weight:700">${myG}–${oppG}${tbTxt}</span>`;
 }).join(’ ‘);
-const el=m.status===‘confirmed’&&m.eloChange?`<div style="margin-top:6px;font-size:11px;letter-spacing:1px;color:${won?'var(--green)':'var(--red)'}">${won?'+':'−'}${m.eloChange} Pt</div>`:’’;
-return `<div class="history-card"> <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"> <span style="color:var(--white);font-weight:500">vs ${opp?.name}</span> <span style="color:${sc};font-size:10px;font-weight:600;letter-spacing:2px">${sl}</span> </div> <div style="display:flex;gap:10px">${sh}</div>${el} </div>`;
+const el=m.status===‘confirmed’&&m.eloChange?`<div style="margin-top:6px;font-size:11px;letter-spacing:1px;color:${won?'#4caf7d':'#e05555'}">${won?'+':'−'}${m.eloChange} Pt</div>`:’’;
+return `<div class="history-card"> <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"> <span style="color:#f0ede8;font-weight:500">vs ${opp?.name}</span> <span style="color:${sc};font-size:10px;font-weight:600;letter-spacing:2px">${sl}</span> </div> <div style="display:flex;gap:10px">${sh}</div>${el} </div>`;
 }).join(’’);
 }
 
