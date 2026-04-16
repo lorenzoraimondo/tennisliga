@@ -463,7 +463,9 @@ function validateSet(p1,p2){
 function validateTiebreak(tb1,tb2){
   if(isNaN(tb1)||isNaN(tb2)||tb1<0||tb2<0) return false;
   const hi=Math.max(tb1,tb2),lo=Math.min(tb1,tb2);
-  return hi>=7&&(hi-lo)>=2;
+  if(hi<7) return false;
+  if(hi===7) return lo<=5; // 7-0 fino a 7-5 ok, 7-6 no
+  return (hi-lo)===2; // ai vantaggi: 8-6, 9-7, 10-8 ecc.
 }
 
 // LOGIN
